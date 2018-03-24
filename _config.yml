@@ -1,0 +1,31 @@
+name: Jose Gil Personal Webpage Based on White Paper
+description: >
+    Personal home page.
+
+
+master_repo: false
+url: "http://josegil.es"
+markdown: kramdown
+highlighter: rouge
+
+plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
+
+paginate: 4
+
+logo:             logo.png
+disqus_shortname:
+
+rtl: false
+owner:
+  name:           whitepaper
+  avatar:         ""
+  email:          "jose.gilmolina@gmail.com"
+  twitter: josgilmo
+  github: https://github.com/jostilmo
+  linkedin: https://es.linkedin.com/in/josegilmolina
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
