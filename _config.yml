@@ -1,31 +1,22 @@
-name: Jose Gil Personal Webpage
-description: 
-    Personal home page.
+# ----------- CONFIGURABLE START -----------
+title:            "Scribble"
+description:      "Such theme, very cool."
+url:               # Site url, without a slash at the end.
+signoff:          "muan" # Your name
+facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+share:            false # Turn on twitter and facebook share buttons
 
+links:
+  - name:         Posts
+    url:          /
+    external:     false
+  - name:         About me
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
 
-master_repo: false
-url: "http://josegil.es"
-markdown: kramdown
-highlighter: rouge
-
-plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
-
-paginate: 4
-
-logo:             logo.png
-disqus_shortname:
-
-rtl: false
-owner:
-  name:           Jose Gil
-  avatar:         ""
-  email:          "jose.gilmolina@gmail.com"
-  twitter: josgilmo
-  github: https://github.com/jostilmo
-  linkedin: https://es.linkedin.com/in/josegilmolina
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
+permalink:        /posts/:title
+defaults:
+  - values:
+      layout: "default"
