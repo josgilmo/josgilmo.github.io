@@ -1,0 +1,55 @@
+I"<p>Actualmente estoy cursando “Architecting with Google Kubernetes Engine” en Coursera.org, y el número de vocablos nuevos para mi me resulta algo abrumador. La mezcla de productos, tecnologías, conceptos, proyectos de código libre es lo suficientemente extensa como para perderse. El objetivo de este documento es, por lo tanto, el de ayudarme a entender y memorizar todo este vocabulario nuevo.</p>
+
+<ul>
+  <li>IAM: Sistema de autorización.</li>
+  <li>Preemtible VM</li>
+  <li>Cloud DNS (8.8.8.8)</li>
+  <li>Cloud CDN</li>
+  <li>Cloud Router</li>
+  <li>Compute Engine</li>
+  <li>VPC Network: Virtual Private Cloud Network.</li>
+  <li>Dedicated Interconnect</li>
+  <li>VPC Peering: Para comunica VPC de forma interna.</li>
+  <li>Share VPC.</li>
+  <li>Cloud Load Balancing</li>
+  <li>Cloud storage (is not a file system)
+    <ul>
+      <li>Online transfer</li>
+      <li>Storage transfer service</li>
+      <li>Transfer Appliance</li>
+    </ul>
+  </li>
+  <li>Big Query</li>
+  <li>Bigtable = Google no-sql</li>
+  <li>Google Cloud Sql</li>
+  <li>Cloud Spanner</li>
+  <li>Cloud Data Store</li>
+  <li>Google Kubernetes Engine</li>
+  <li>GKE</li>
+  <li>App Engine</li>
+  <li>Cloud Source Repositories</li>
+  <li>Cloud Functions</li>
+  <li>Deploy manager</li>
+  <li>Imperative configuration.</li>
+  <li>Declarative configuration.</li>
+  <li>Proactive instrumentation.</li>
+  <li>Stackdriver</li>
+  <li>Cloud Dataproc</li>
+  <li>Cloud Dataflow</li>
+  <li>BigQuery</li>
+  <li>Cloud Pub/Sub</li>
+  <li>Cloud Datalab</li>
+  <li>Hadoop</li>
+  <li>Spark</li>
+  <li>Pig</li>
+  <li>Hive</li>
+  <li>Tensorflow</li>
+  <li>Cloud ML</li>
+  <li>Machine Learning APIs</li>
+  <li>Cloud Visiion API</li>
+  <li>Cloud Natural Language API</li>
+  <li>Cloud Translation API</li>
+  <li>Cloud Video Ingelligence API</li>
+  <li></li>
+</ul>
+:ET

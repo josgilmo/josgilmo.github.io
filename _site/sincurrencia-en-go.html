@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+    
+      Sincurrencia en go &middot; José Gil
+    
+  </title>
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="José Gil" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <div class="container content">
+      <header class="masthead">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">José Gil</a>
+          <small>Página personal</small>
+          
+          <a style="float:right" class="masthead-title" href="/about">Sobre mi</a> 
+          <strong style="padding-left:8px;padding-right:8px;float:right"> | </strong> 
+        </h3>
+
+        <h3 class="masthead-title"></h3>
+      </header>
+
+      <main>
+        <article class="post">
+  <h1 class="post-title">Sincurrencia en go</h1>
+  <time datetime="2019-11-06T00:00:00+01:00" class="post-date">06 Nov 2019</time>
+  <p>Reglas para el dueño de un channel.</p>
+
+<ol>
+  <li>Instantiate the channel.</li>
+  <li>Perform writes, or pass ownership to another goroutine.</li>
+  <li>Close the channel.</li>
+  <li>Ecapsulate the previous three things in this list and expose them via a reader channel.</li>
+</ol>
+
+<h1 id="quiz-1">Quiz 1</h1>
+<h2 id="question-1">Question 1</h2>
+<p>Qué devuelve esto? (Deadlocks).
+https://play.golang.org/p/iTAKQmZkDbl</p>
+
+<h2 id="question-2">Question 2</h2>
+<p>Qué devuelve esto (reading from a closed channel):
+https://play.golang.org/p/JA_l0s2bhY6</p>
+
+<h2 id="question-2-1">Question 2</h2>
+<p>Qué devuelve esto? (nil channels).
+https://play.golang.org/p/1dJNpdbOMpp</p>
+
+<h2 id="question-3">Question 3</h2>
+<p>Qué devuelve esto (closing nil channel):
+https://play.golang.org/p/7GGPRwwg2z5</p>
+
+<h2 id="question-5">Question 5</h2>
+<p>Qué devuelve esto:
+https://play.golang.org/p/Q0FvgrY9scC</p>
+
+<h1 id="quiz-2">Quiz 2:</h1>
+<h2 id="question-1-1">Question 1.</h2>
+
+<p>stringStream := make(chan string) go func() {
+        close(stringStream)
+    }()
+    salutation, ok := &lt;-stringStream
+    fmt.Printf(“(%v): %v”, ok, salutation)
+}</p>
+
+<p>https://play.golang.org/p/vVhLTD5zaKO</p>
+
+<p>that is the value for “ok”?</p>
+
+<h2 id="question-2-2">Question 2</h2>
+<p>https://play.golang.org/p/D0u_I3KWqMw</p>
+
+<h2 id="question-3-1">Question 3</h2>
+<p>Buscar un escenario de bloqueo en escritura para channels buffered.
+https://play.golang.org/p/OgxbFbyvoXt</p>
+
+<h2 id="question-9">Question 9:</h2>
+<p>sincronización de timings.
+https://play.golang.org/p/GSS4bgJMSw4</p>
+
+<h2 id="question-10">Question 10:</h2>
+<p>https://play.golang.org/p/Hh97uPWIqHi</p>
+
+<h1 id="patterns-in-go">Patterns in Go</h1>
+<h2 id="or-pattern">or Pattern:</h2>
+<p>https://play.golang.org/p/ppyAH-_0prJ</p>
+
+<h2 id="ordone-pattern">OrDone Pattern:</h2>
+<p>https://play.golang.org/p/2tKo4ut3MSP</p>
+
+<h2 id="tee-pattern">tee Pattern:</h2>
+<p>https://play.golang.org/p/bFm16a4UYjm</p>
+
+
+</article>
+
+
+<aside class="related">
+  <h3>Related posts</h3>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/java-world">
+          Java world.
+          <small><time datetime="2019-11-03T00:00:00+01:00">03 Nov 2019</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/otra-forma-de-hacer-test-de-contratos">
+          What's Jekyll?
+          <small><time datetime="2019-06-09T00:00:00+02:00">09 Jun 2019</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/gcp-glosario">
+          Glosario de Google Cloud Platform
+          <small><time datetime="2019-06-08T00:00:00+02:00">08 Jun 2019</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+      </main>
+
+      <footer class="footer">
+        <small>
+          &copy; <time datetime="2020-01-21T10:52:31+01:00">2020</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
+
+    
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+    </style>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);       
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Sincurrencia en Go
+
+You can find me at [@josgilmo](https://twitter.com/josgilmo)
+
+---
+
+# Agenda
+
+* Writting code with channels.
+
+* Advanced concurrency problems.
+
+* Golang patterns
+
+---
+
+class: center, middle
+
+Channels quiz [here](link)
+
+---
+
+class:  middle
+
+## How to avoid the last situations?
+
+The goroutine that owns a channel should:
+
+1. Instantiate the channel.
+
+2. Perform writes, or pass ownership to another goroutine.
+
+3. Close the channel.
+
+4. Ecapsulate the previous three things in this list and expose them via a reader channel.
+
+
+---
+
+## Things that happen:
+
+* Because we’re the one initializing the channel, we remove the risk of deadlocking
+by writing to a nil channel.
+
+* Because we’re the one initializing the channel, we remove the risk of panicing by
+closing a nil channel.
+
+* Because we’re the one who decides when the channel gets closed, we remove the
+risk of panicing by writing to a closed channel.
+
+* Because we’re the one who decides when the channel gets closed, we remove the
+risk of panicing by closing a channel more than once.
+
+* We wield the type checker at compile time to prevent improper writes to our
+channel.
+
+---
+
+## What happens with this piece of code?
+
+Channels quiz [here](link)
+
+---
+
+## Differents concurrent problems:
+
+Deadlocks: A deadlocked program is one in which all concurrent processes are waiting on one another..
+
+Livelocks: 
+
+Livelocks are programs that are actively performing concurrent operations, but these operations do nothing to move the state of the program forward.
+
+[Livelocks example](https://play.golang.org/p/fidw-cOx5cF)
+
+
+Starvation: Starvation is any situation where a concurrent process cannot get all the resources it needs to perform work.
+
+[Starvation example](https://play.golang.org/p/6eXzWFrZV56)
+
+---
+
+## Concurrency patterns:
+
+---
+
+[Error handling](https://play.golang.org/p/uK2hpCgM1gT)
+
+---
+
+[Or Done pattern](https://play.golang.org/p/2tKo4ut3MSP)
+
+---
+
+[tee pattern](https://play.golang.org/p/bFm16a4UYjm)
+
+---
+
+[bridge pattern](https://play.golang.org/p/2_3v8wh6wgD)
+
+---
+
+Next pipelines.
+
+---
+
+    </textarea>
+    <script src="https://remarkjs.com/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>

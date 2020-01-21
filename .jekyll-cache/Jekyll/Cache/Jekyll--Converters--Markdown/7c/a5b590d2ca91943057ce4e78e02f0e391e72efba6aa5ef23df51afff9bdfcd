@@ -1,0 +1,20 @@
+I"$<h1 id="react-para-un-backend-developer">React para un Backend developer.</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JavaScript ha evolucionado exponencialmente en los últimos años. Desde que comencé a trabajar en el mundo Startup en Barcelona, con distintas librerías JS para gestionar el frontal de una web, entrando en el mercado de forma disruptiva jQuery, ha llovido un rato. Ahora mismo no entendemos la web
+como un renderización de documentos HTML, sino como aplicaciones completas con gran cantidad de funcionalidades y responsabilidades, y exigimos que dichas aplicaciones web tengan una gran calidad. 
+
+Mirando mi curriculum y mi actual sideproyect, pensé que era buen momento para cambiar la forma en la que percibo el desarrollo de frontend y seguir un principio que estoy adoptando en los últimos tiempos: "Aprender haciendo".  Para ello me puse a formalizar un API Rest de mi sideproyect, documentarlo con swagger, publicarlo y crear una aplicación web con React que hiciera una pequeña parte de las funcionalidades de mi sideproyect. 
+
+Estas son algunas cosas de las que aprendí en el camino:
+</code></pre></div></div>
+
+<h2 id="ecosistema">Ecosistema.</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>El ecosistema y tooling, para alguien que dejó de mirar y hacer cosas en frontal siguiendo las últimas tecnologías es brutal.
+</code></pre></div></div>
+
+<h2 id="sintaxis-de-js">Sintaxis de JS.</h2>
+
+<h2 id="handler">Handler.</h2>
+
+<h2 id="redux">Redux.</h2>
+:ET

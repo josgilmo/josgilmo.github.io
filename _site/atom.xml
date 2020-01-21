@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>José Gil</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2020-01-21T10:52:31+01:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Mark Otto</name>
+   <email>markdotto@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Sincurrencia en go</title>
+   <link href="http://localhost:4000/sincurrencia-en-go"/>
+   <updated>2019-11-06T00:00:00+01:00</updated>
+   <id>http://localhost:4000/sincurrencia-en-go</id>
+   <content type="html">&lt;p&gt;Reglas para el dueño de un channel.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Instantiate the channel.&lt;/li&gt;
+  &lt;li&gt;Perform writes, or pass ownership to another goroutine.&lt;/li&gt;
+  &lt;li&gt;Close the channel.&lt;/li&gt;
+  &lt;li&gt;Ecapsulate the previous three things in this list and expose them via a reader channel.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;quiz-1&quot;&gt;Quiz 1&lt;/h1&gt;
+&lt;h2 id=&quot;question-1&quot;&gt;Question 1&lt;/h2&gt;
+&lt;p&gt;Qué devuelve esto? (Deadlocks).
+https://play.golang.org/p/iTAKQmZkDbl&lt;/p&gt;
+
+&lt;h2 id=&quot;question-2&quot;&gt;Question 2&lt;/h2&gt;
+&lt;p&gt;Qué devuelve esto (reading from a closed channel):
+https://play.golang.org/p/JA_l0s2bhY6&lt;/p&gt;
+
+&lt;h2 id=&quot;question-2-1&quot;&gt;Question 2&lt;/h2&gt;
+&lt;p&gt;Qué devuelve esto? (nil channels).
+https://play.golang.org/p/1dJNpdbOMpp&lt;/p&gt;
+
+&lt;h2 id=&quot;question-3&quot;&gt;Question 3&lt;/h2&gt;
+&lt;p&gt;Qué devuelve esto (closing nil channel):
+https://play.golang.org/p/7GGPRwwg2z5&lt;/p&gt;
+
+&lt;h2 id=&quot;question-5&quot;&gt;Question 5&lt;/h2&gt;
+&lt;p&gt;Qué devuelve esto:
+https://play.golang.org/p/Q0FvgrY9scC&lt;/p&gt;
+
+&lt;h1 id=&quot;quiz-2&quot;&gt;Quiz 2:&lt;/h1&gt;
+&lt;h2 id=&quot;question-1-1&quot;&gt;Question 1.&lt;/h2&gt;
+
+&lt;p&gt;stringStream := make(chan string) go func() {
+        close(stringStream)
+    }()
+    salutation, ok := &amp;lt;-stringStream
+    fmt.Printf(“(%v): %v”, ok, salutation)
+}&lt;/p&gt;
+
+&lt;p&gt;https://play.golang.org/p/vVhLTD5zaKO&lt;/p&gt;
+
+&lt;p&gt;that is the value for “ok”?&lt;/p&gt;
+
+&lt;h2 id=&quot;question-2-2&quot;&gt;Question 2&lt;/h2&gt;
+&lt;p&gt;https://play.golang.org/p/D0u_I3KWqMw&lt;/p&gt;
+
+&lt;h2 id=&quot;question-3-1&quot;&gt;Question 3&lt;/h2&gt;
+&lt;p&gt;Buscar un escenario de bloqueo en escritura para channels buffered.
+https://play.golang.org/p/OgxbFbyvoXt&lt;/p&gt;
+
+&lt;h2 id=&quot;question-9&quot;&gt;Question 9:&lt;/h2&gt;
+&lt;p&gt;sincronización de timings.
+https://play.golang.org/p/GSS4bgJMSw4&lt;/p&gt;
+
+&lt;h2 id=&quot;question-10&quot;&gt;Question 10:&lt;/h2&gt;
+&lt;p&gt;https://play.golang.org/p/Hh97uPWIqHi&lt;/p&gt;
+
+&lt;h1 id=&quot;patterns-in-go&quot;&gt;Patterns in Go&lt;/h1&gt;
+&lt;h2 id=&quot;or-pattern&quot;&gt;or Pattern:&lt;/h2&gt;
+&lt;p&gt;https://play.golang.org/p/ppyAH-_0prJ&lt;/p&gt;
+
+&lt;h2 id=&quot;ordone-pattern&quot;&gt;OrDone Pattern:&lt;/h2&gt;
+&lt;p&gt;https://play.golang.org/p/2tKo4ut3MSP&lt;/p&gt;
+
+&lt;h2 id=&quot;tee-pattern&quot;&gt;tee Pattern:&lt;/h2&gt;
+&lt;p&gt;https://play.golang.org/p/bFm16a4UYjm&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Java world.</title>
+   <link href="http://localhost:4000/java-world"/>
+   <updated>2019-11-03T00:00:00+01:00</updated>
+   <id>http://localhost:4000/java-world</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/otra-forma-de-hacer-test-de-contratos"/>
+   <updated>2019-06-09T00:00:00+02:00</updated>
+   <id>http://localhost:4000/otra-forma-de-hacer-test-de-contratos</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Glosario de Google Cloud Platform</title>
+   <link href="http://localhost:4000/gcp-glosario"/>
+   <updated>2019-06-08T00:00:00+02:00</updated>
+   <id>http://localhost:4000/gcp-glosario</id>
+   <content type="html">&lt;p&gt;Actualmente estoy cursando “Architecting with Google Kubernetes Engine” en Coursera.org, y el número de vocablos nuevos para mi me resulta algo abrumador. La mezcla de productos, tecnologías, conceptos, proyectos de código libre es lo suficientemente extensa como para perderse. El objetivo de este documento es, por lo tanto, el de ayudarme a entender y memorizar todo este vocabulario nuevo.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;IAM: Sistema de autorización.&lt;/li&gt;
+  &lt;li&gt;Preemtible VM&lt;/li&gt;
+  &lt;li&gt;Cloud DNS (8.8.8.8)&lt;/li&gt;
+  &lt;li&gt;Cloud CDN&lt;/li&gt;
+  &lt;li&gt;Cloud Router&lt;/li&gt;
+  &lt;li&gt;Compute Engine&lt;/li&gt;
+  &lt;li&gt;VPC Network: Virtual Private Cloud Network.&lt;/li&gt;
+  &lt;li&gt;Dedicated Interconnect&lt;/li&gt;
+  &lt;li&gt;VPC Peering: Para comunica VPC de forma interna.&lt;/li&gt;
+  &lt;li&gt;Share VPC.&lt;/li&gt;
+  &lt;li&gt;Cloud Load Balancing&lt;/li&gt;
+  &lt;li&gt;Cloud storage (is not a file system)
+    &lt;ul&gt;
+      &lt;li&gt;Online transfer&lt;/li&gt;
+      &lt;li&gt;Storage transfer service&lt;/li&gt;
+      &lt;li&gt;Transfer Appliance&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Big Query&lt;/li&gt;
+  &lt;li&gt;Bigtable = Google no-sql&lt;/li&gt;
+  &lt;li&gt;Google Cloud Sql&lt;/li&gt;
+  &lt;li&gt;Cloud Spanner&lt;/li&gt;
+  &lt;li&gt;Cloud Data Store&lt;/li&gt;
+  &lt;li&gt;Google Kubernetes Engine&lt;/li&gt;
+  &lt;li&gt;GKE&lt;/li&gt;
+  &lt;li&gt;App Engine&lt;/li&gt;
+  &lt;li&gt;Cloud Source Repositories&lt;/li&gt;
+  &lt;li&gt;Cloud Functions&lt;/li&gt;
+  &lt;li&gt;Deploy manager&lt;/li&gt;
+  &lt;li&gt;Imperative configuration.&lt;/li&gt;
+  &lt;li&gt;Declarative configuration.&lt;/li&gt;
+  &lt;li&gt;Proactive instrumentation.&lt;/li&gt;
+  &lt;li&gt;Stackdriver&lt;/li&gt;
+  &lt;li&gt;Cloud Dataproc&lt;/li&gt;
+  &lt;li&gt;Cloud Dataflow&lt;/li&gt;
+  &lt;li&gt;BigQuery&lt;/li&gt;
+  &lt;li&gt;Cloud Pub/Sub&lt;/li&gt;
+  &lt;li&gt;Cloud Datalab&lt;/li&gt;
+  &lt;li&gt;Hadoop&lt;/li&gt;
+  &lt;li&gt;Spark&lt;/li&gt;
+  &lt;li&gt;Pig&lt;/li&gt;
+  &lt;li&gt;Hive&lt;/li&gt;
+  &lt;li&gt;Tensorflow&lt;/li&gt;
+  &lt;li&gt;Cloud ML&lt;/li&gt;
+  &lt;li&gt;Machine Learning APIs&lt;/li&gt;
+  &lt;li&gt;Cloud Visiion API&lt;/li&gt;
+  &lt;li&gt;Cloud Natural Language API&lt;/li&gt;
+  &lt;li&gt;Cloud Translation API&lt;/li&gt;
+  &lt;li&gt;Cloud Video Ingelligence API&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/documentacion-viva-ejemplo"/>
+   <updated>2019-06-06T00:00:00+02:00</updated>
+   <id>http://localhost:4000/documentacion-viva-ejemplo</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Anatomía de un Evento de Dominio</title>
+   <link href="http://localhost:4000/anatomia-de-un-evento"/>
+   <updated>2019-06-05T00:00:00+02:00</updated>
+   <id>http://localhost:4000/anatomia-de-un-evento</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/react-para-un-backend-developer"/>
+   <updated>2019-06-04T00:00:00+02:00</updated>
+   <id>http://localhost:4000/react-para-un-backend-developer</id>
+   <content type="html">&lt;h1 id=&quot;react-para-un-backend-developer&quot;&gt;React para un Backend developer.&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;JavaScript ha evolucionado exponencialmente en los últimos años. Desde que comencé a trabajar en el mundo Startup en Barcelona, con distintas librerías JS para gestionar el frontal de una web, entrando en el mercado de forma disruptiva jQuery, ha llovido un rato. Ahora mismo no entendemos la web
+como un renderización de documentos HTML, sino como aplicaciones completas con gran cantidad de funcionalidades y responsabilidades, y exigimos que dichas aplicaciones web tengan una gran calidad. 
+
+Mirando mi curriculum y mi actual sideproyect, pensé que era buen momento para cambiar la forma en la que percibo el desarrollo de frontend y seguir un principio que estoy adoptando en los últimos tiempos: &quot;Aprender haciendo&quot;.  Para ello me puse a formalizar un API Rest de mi sideproyect, documentarlo con swagger, publicarlo y crear una aplicación web con React que hiciera una pequeña parte de las funcionalidades de mi sideproyect. 
+
+Estas son algunas cosas de las que aprendí en el camino:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ecosistema&quot;&gt;Ecosistema.&lt;/h2&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;El ecosistema y tooling, para alguien que dejó de mirar y hacer cosas en frontal siguiendo las últimas tecnologías es brutal.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;sintaxis-de-js&quot;&gt;Sintaxis de JS.&lt;/h2&gt;
+
+&lt;h2 id=&quot;handler&quot;&gt;Handler.&lt;/h2&gt;
+
+&lt;h2 id=&quot;redux&quot;&gt;Redux.&lt;/h2&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Generacion Codigo Go</title>
+   <link href="http://localhost:4000/generacion-codigo-go"/>
+   <updated>2019-05-27T00:00:00+02:00</updated>
+   <id>http://localhost:4000/generacion-codigo-go</id>
+   <content type="html">
+&lt;hr /&gt;
+&lt;p&gt;layout: post
+title: What’s Jekyll?
+—&lt;/p&gt;
+
+&lt;p&gt;En el último año he estado trabajando con Go y he aprendido a opitimizar mi tiempo de desarrollo 
+introduciendo distintas herramientas para generar código con distintos fines. Este artículo es un 
+pequeño recopilatorio de estas herramientas.&lt;/p&gt;
+
+&lt;p&gt;moq:&lt;/p&gt;
+
+&lt;p&gt;wire:&lt;/p&gt;
+
+&lt;p&gt;protobuf y gRPC:&lt;/p&gt;
+
+&lt;p&gt;swagger-go:&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/testing-en-golang"/>
+   <updated>2019-05-02T00:00:00+02:00</updated>
+   <id>http://localhost:4000/testing-en-golang</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Visualización de algoritmos de Machine Learning.</title>
+   <link href="http://localhost:4000/visualizacion-algoritmos-ml"/>
+   <updated>2019-04-17T00:00:00+02:00</updated>
+   <id>http://localhost:4000/visualizacion-algoritmos-ml</id>
+   <content type="html">&lt;p&gt;Recientemente me he leído &lt;a href=&quot;https://www.packtpub.com/big-data-and-business-intelligence/machine-learning-go&quot;&gt;Machine Learning With Go&lt;/a&gt; y en las explicaciones de los distintos algoritmos el autor enlazaba animaciones para ayudar a entenderlos.&lt;/p&gt;
+
+&lt;p&gt;Encontré tan fascinante la idea, que decidí hacer una recopilación de los distintos algoritmos tratados en el libro y buscar una animación.&lt;/p&gt;
+
+&lt;p&gt;http://setosa.io/ev/ordinary-least-squares-regression/&lt;/p&gt;
+
+&lt;p&gt;http://shiny.stat.calpoly.edu/3d_regression/&lt;/p&gt;
+
+&lt;p&gt;http://stanford.edu/class/ee103/visualizations/kmeans/kmeans.html&lt;/p&gt;
+
+&lt;p&gt;https://www.naftaliharris.com/blog/visualizing-k-means-clustering/&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/las-tripas-de-orms"/>
+   <updated>2019-02-07T00:00:00+01:00</updated>
+   <id>http://localhost:4000/las-tripas-de-orms</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/procesos-creativos"/>
+   <updated>2019-02-03T00:00:00+01:00</updated>
+   <id>http://localhost:4000/procesos-creativos</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Inyección de dependencias en Go.</title>
+   <link href="http://localhost:4000/di-en-golang"/>
+   <updated>2019-01-20T00:00:00+01:00</updated>
+   <id>http://localhost:4000/di-en-golang</id>
+   <content type="html">&lt;p&gt;Comenzar a aprender y trabajar con un lenguaje nuevo suele ser emocionante y divertido al comienzo, hasta que comenzamos a echar de menos procesos o herramientas a los que estabamos acostumbrados. Mis orígenes son PHP, y llevo en mi mochila (mi cabeza) ideas como el inyector de dependencias de Symfony. Hace más de año y medio, cuando comencé con Go no había ningún DI maduro por lo que la gente estaba acostumbrada a trabajar inyectando directamente las dependencias, y yo quería volver a usar 
+este tipo de herramientas, y ahí es cuando comenzó viaje una vida con un DI mejor.&lt;/p&gt;
+
+&lt;p&gt;Lo primero que me encontré es que los Go developers hemos olvidado lo que es la inyección de dependencia y la confundimos con 
+la composición. Creemos que el pasar las dependencias en el costructor es inyección de dependencias, pero la realidad es que eso es composición. Extraigo de la wikipedia la definición de D.I.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;In software engineering, dependency injection is a technique whereby one object supplies the dependencies of another object. A &quot;dependency&quot; is an object that can be used, for example as a service. Instead of a client specifying which service it will use, something tells the client what service to use. The &quot;injection&quot; refers to the passing of a dependency (a service) into the object (a client) that would use it. The service is made part of the client's state.[1] Passing the service to the client, rather than allowing a client to build or find the service, is the fundamental requirement of the pattern.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Matizado este punto, podemos preguntarnos ¿cómo y para qué hacemos DI en Go?&lt;/p&gt;
+
+&lt;p&gt;La solución que he adoptado en el equipo que estoy trabajando es google/wire. No es más que un generador de código que resuelve el grafo de dependencias y crea funciones que cumplen contratos para gestionar las dependencias. Los ejemplos de 
+la librería son lo suficientemente explicativos como para echarles un ojo y prestarle algo de atención.&lt;/p&gt;
+
+&lt;p&gt;Aunque pueda ser un poco repetitivo, voy a poner un ejemplo de cómo lo estamos haciendo nosotros, y qué mejoras hemos encontrado con el tiempo.&lt;/p&gt;
+
+&lt;p&gt;Mejoras:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ahorro de tiempo al actualizar las dependencias.&lt;/li&gt;
+  &lt;li&gt;Reutilización de inicalización de inyecciónes en base a la configuración.&lt;/li&gt;
+  &lt;li&gt;Simplicidad en el bootstrapping de nuestra aplicación.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>What's Jekyll?</title>
+   <link href="http://localhost:4000/whats-jekyll"/>
+   <updated>2016-01-01T00:00:00+01:00</updated>
+   <id>http://localhost:4000/whats-jekyll</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s an immensely useful tool. Find out more by &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
