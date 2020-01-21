@@ -1,5 +1,5 @@
 # Permalinks
-permalink:           pretty
+permalink:           :title
 
 # Setup
 title:               José Gil
@@ -28,5 +28,4 @@ github:
 
 # Gems
 gems:
-  - jekyll-paginate
   - jekyll-gist
