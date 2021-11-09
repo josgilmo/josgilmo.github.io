@@ -11,4 +11,6 @@ Mi nombre es José Gil. Soy titulado en ingeniería en informática de sistemas 
 
 Aunque originalmente soy de Torre del Mar (Málaga), hace muchos años que vivo con mi familia en Barcelona, ciudad a la que he aprendido a querer. Me mudé de una forma temporal para probar a trabajar fuera de mi ciudad, y no he vuelto. 
 
+t
+
 
